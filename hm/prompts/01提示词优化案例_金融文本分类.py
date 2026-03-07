@@ -2,9 +2,9 @@ from openai import OpenAI
 import os
 # 1. 获取client对象，OpenAI类对象
 client = OpenAI(
-    base_url="http://localhost:11434/v1",
+    # base_url="http://localhost:11434/v1",
     api_key=os.getenv("QIAN_WEN_API_KEY"),
-    # base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
 )
 
 examples_data = {       # 示例数据
@@ -55,7 +55,7 @@ for key, value in examples_data.items():
 for q in questions:
     response = client.chat.completions.create(
         # model="qwen3-max",
-        model="qwen2.5:latest",
+        model="qwen3.5-flash",
         messages=messages + [{"role": "user", "content": f"按照示例，回答这段文本的分类类别：{q}"}]
     )
 

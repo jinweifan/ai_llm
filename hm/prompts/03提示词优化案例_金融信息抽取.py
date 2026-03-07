@@ -1,9 +1,10 @@
 from openai import OpenAI
 import json
-
+import os
 client = OpenAI(
     # base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
-    base_url="http://localhost:11434/v1"
+    base_url="http://localhost:11434/v1",
+    api_key=os.getenv("QIAN_WEN_API_KEY"),
 )
 
 schema = ['日期', '股票名称', '开盘价', '收盘价', '成交量']
@@ -65,10 +66,17 @@ for example in examples_data:
 
 for q in questions:
     response = client.chat.completions.create(
-        model="qwen3:4b",
-        messages=messages + [{"role": "user", "content": f"按照上述的示例，现在抽取这个句子的信息：{q}"}]
+        model="qwen2.5:latest",
+        messages=messages + [{"role": "user", "content": f"按照上述的示例，现在抽取这个句子的信息：{q}"}],
+        stream=True
     )
-
-    print(response.choices[0].message.content)
+    for chunk in response:
+        delta = chunk.choices[0].delta
+        # if hasattr(delta, "reasoning_content") and delta.reasoning_content is not None:
+        #     print(delta.reasoning_content, end="", flush=True)
+        if hasattr(delta, "content") and delta.content:
+            print(delta.content, end="", flush=True)
+    print()
+    # print(response.choices[0].message.content)
 
 

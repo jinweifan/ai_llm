@@ -2,7 +2,8 @@ from openai import OpenAI
 
 client = OpenAI(
     # base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"
-    base_url="http://localhost:11434/v1"
+    base_url="http://localhost:11434/v1",
+    api_key=""
 )
 
 examples_data = {
@@ -52,8 +53,14 @@ for key, value in examples_data.items():
 
 for q in questions:
     response = client.chat.completions.create(
-        model="qwen3:4b",
-        messages=messages + [{"role": "user", "content": f"句子1：[{q[0]}]，句子2：[{q[1]}]"}]
+        model="qwen2.5:latest",
+        messages=messages + [{"role": "user", "content": f"句子1：[{q[0]}]，句子2：[{q[1]}]"}],
+        stream=True
     )
 
-    print(response.choices[0].message.content)
+    for chunk in response:
+        delta = chunk.choices[0].delta
+        if hasattr(delta, "content") and delta.content:
+            print(delta.content, end="", flush=True)
+    print()
+        # print(response.choices[0].message.content)

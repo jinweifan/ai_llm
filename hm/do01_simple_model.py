@@ -7,11 +7,11 @@ client = OpenAI(
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
 )
 
-messages = [{"role": "user", "content": "本地部署千问大模型，是核显选择什么那个版本的大模型和参数量的呢？"}]
+messages = [{"role": "user", "content": "最近抖音游戏直播热梗“长官”一词的来源是什么？"}]
 completion = client.chat.completions.create(
-    model="qwen3-max",  # 您可以按需更换为其它深度思考模型
+    model="qwen3.5-plus",  # 您可以按需更换为其它深度思考模型
     messages=messages,
-    extra_body={"enable_thinking": True},
+    # extra_body={"enable_thinking": True},
     stream=True
 )
 is_answering = False  # 是否进入回复阶段
