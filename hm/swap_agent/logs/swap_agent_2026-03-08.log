@@ -1,0 +1,474 @@
+2026-03-08 18:00:59 - swap_agent - INFO - logger_handler.py:55 - test
+2026-03-08 18:00:59 - swap_agent - DEBUG - logger_handler.py:56 - test
+2026-03-08 18:00:59 - swap_agent - WARNING - logger_handler.py:57 - test
+2026-03-08 18:00:59 - swap_agent - ERROR - logger_handler.py:58 - test
+2026-03-08 18:00:59 - swap_agent - CRITICAL - logger_handler.py:59 - test
+2026-03-08 22:06:53 - swap_agent - ERROR - prompt_loader.py:29 - [load_rag_summary_prompt]解析rag总结提示词失败: [Errno 2] No such file or directory: 'c:\\Users\\Reddyfan\\Desktop\\code\\ai_llm\\hm\\swap_agent\\prompts/rag_summary_prompt.txt'
+2026-03-08 22:07:57 - swap_agent - ERROR - prompt_loader.py:29 - [load_rag_summary_prompt]解析rag总结提示词失败: [Errno 2] No such file or directory: 'c:\\Users\\Reddyfan\\Desktop\\code\\ai_llm\\hm\\swap_agent\\prompts/rag_summary.txt'
+2026-03-08 22:57:02 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 69, in load_documents
+    if check_md5_hex(document.metadata["md5_hex"]):
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 22:57:02 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt加载失败: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 66, in load_documents
+    documents = get_file_documents(file_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 53, in get_file_documents
+    return text_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\utils\file_handler.py", line 52, in text_loader
+    return loader.load()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt
+2026-03-08 22:57:02 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt加载失败: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 66, in load_documents
+    documents = get_file_documents(file_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 53, in get_file_documents
+    return text_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\utils\file_handler.py", line 52, in text_loader
+    return loader.load()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt
+2026-03-08 22:57:02 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt加载失败: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 66, in load_documents
+    documents = get_file_documents(file_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 53, in get_file_documents
+    return text_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\utils\file_handler.py", line 52, in text_loader
+    return loader.load()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt
+2026-03-08 22:57:02 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt加载失败: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 66, in load_documents
+    documents = get_file_documents(file_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 53, in get_file_documents
+    return text_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\utils\file_handler.py", line 52, in text_loader
+    return loader.load()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt
+2026-03-08 22:57:02 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt加载失败: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 66, in load_documents
+    documents = get_file_documents(file_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 53, in get_file_documents
+    return text_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\utils\file_handler.py", line 52, in text_loader
+    return loader.load()
+           ^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt
+2026-03-08 22:58:14 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 69, in load_documents
+    if check_md5_hex(document.metadata["md5_hex"]):
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 22:58:14 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 69, in load_documents
+    if check_md5_hex(document.metadata["md5_hex"]):
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 22:58:14 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 69, in load_documents
+    if check_md5_hex(document.metadata["md5_hex"]):
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 22:58:14 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 69, in load_documents
+    if check_md5_hex(document.metadata["md5_hex"]):
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 22:58:14 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 69, in load_documents
+    if check_md5_hex(document.metadata["md5_hex"]):
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 22:58:14 - swap_agent - ERROR - vector_store.py:87 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 69, in load_documents
+    if check_md5_hex(document.metadata["md5_hex"]):
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:08:24 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:08:25 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:08:26 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:08:27 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt加载失败: status_code: 400 
+ code: InvalidParameter 
+ message: Range of input length should be [1, 8192]
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 83, in load_documents
+    self.vector_store.add_documents([document])
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Range of input length should be [1, 8192]
+2026-03-08 23:08:29 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:08:30 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:08:56 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:08:57 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:08:59 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:09:00 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt加载失败: status_code: 400 
+ code: InvalidParameter 
+ message: Range of input length should be [1, 8192]
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 83, in load_documents
+    self.vector_store.add_documents([document])
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Range of input length should be [1, 8192]
+2026-03-08 23:09:01 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:09:03 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt加载失败: 'md5_hex'
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 84, in load_documents
+    save_md5_hex(document.metadata["md5_hex"])
+                 ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'md5_hex'
+2026-03-08 23:09:33 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:09:33 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:09:34 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:09:34 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:09:35 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:09:35 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:09:36 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:09:36 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:09:37 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt加载完成
+2026-03-08 23:09:39 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt加载完成
+2026-03-08 23:09:40 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt加载失败: status_code: 400 
+ code: InvalidParameter 
+ message: Range of input length should be [1, 8192]
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 83, in load_documents
+    self.vector_store.add_documents([document])
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Range of input length should be [1, 8192]
+2026-03-08 23:09:42 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt加载完成
+2026-03-08 23:09:43 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt加载完成
+2026-03-08 23:14:04 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf已存在
+2026-03-08 23:14:04 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt已存在
+2026-03-08 23:14:04 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt已存在
+2026-03-08 23:14:04 - swap_agent - ERROR - vector_store.py:88 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt加载失败: status_code: 400 
+ code: InvalidParameter 
+ message: Range of input length should be [1, 8192]
+Traceback (most recent call last):
+  File "C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\rag\vector_store.py", line 83, in load_documents
+    self.vector_store.add_documents([document])
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Reddyfan\AppData\Roaming\Python\Python312\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Range of input length should be [1, 8192]
+2026-03-08 23:14:04 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt已存在
+2026-03-08 23:14:04 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt已存在
+2026-03-08 23:14:32 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf已存在
+2026-03-08 23:14:32 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt已存在
+2026-03-08 23:14:32 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt已存在
+2026-03-08 23:14:40 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt加载完成
+2026-03-08 23:14:40 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt已存在
+2026-03-08 23:14:40 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt已存在
+2026-03-08 23:14:58 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf已存在
+2026-03-08 23:14:58 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt已存在
+2026-03-08 23:14:58 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt已存在
+2026-03-08 23:14:58 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt已存在
+2026-03-08 23:14:58 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt已存在
+2026-03-08 23:14:58 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt已存在
+2026-03-08 23:15:23 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf已存在
+2026-03-08 23:15:23 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt已存在
+2026-03-08 23:15:23 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt已存在
+2026-03-08 23:15:23 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt已存在
+2026-03-08 23:15:23 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt已存在
+2026-03-08 23:15:23 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt已存在
+2026-03-08 23:15:44 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:15:47 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:15:50 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:15:53 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:15:55 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:15:58 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:16:01 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:16:04 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf加载完成
+2026-03-08 23:16:08 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt加载完成
+2026-03-08 23:16:12 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt加载完成
+2026-03-08 23:16:20 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt加载完成
+2026-03-08 23:16:25 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt加载完成
+2026-03-08 23:16:29 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt加载完成
+2026-03-08 23:20:40 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf第1/8文档加载完成
+2026-03-08 23:20:43 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf第2/8文档加载完成
+2026-03-08 23:20:46 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf第3/8文档加载完成
+2026-03-08 23:20:49 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf第4/8文档加载完成
+2026-03-08 23:20:51 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf第5/8文档加载完成
+2026-03-08 23:20:55 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf第6/8文档加载完成
+2026-03-08 23:20:58 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf第7/8文档加载完成
+2026-03-08 23:21:01 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf第8/8文档加载完成
+2026-03-08 23:21:04 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt第1/1文档加载完成
+2026-03-08 23:21:08 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt第1/1文档加载完成
+2026-03-08 23:21:16 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt第1/1文档加载完成
+2026-03-08 23:21:21 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt第1/1文档加载完成
+2026-03-08 23:21:25 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt第1/1文档加载完成
+2026-03-08 23:23:45 - swap_agent - INFO - vector_store.py:85 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\md5.txt第1/1文档加载完成
+2026-03-08 23:23:45 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问.pdf已存在
+2026-03-08 23:23:45 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫地机器人100问2.txt已存在
+2026-03-08 23:23:45 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\扫拖一体机器人100问.txt已存在
+2026-03-08 23:23:45 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\故障排除.txt已存在
+2026-03-08 23:23:45 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\维护保养.txt已存在
+2026-03-08 23:23:45 - swap_agent - WARNING - vector_store.py:68 - [加载知识库]C:\Users\Reddyfan\Desktop\code\ai_llm\hm\swap_agent\data\选购指南.txt已存在

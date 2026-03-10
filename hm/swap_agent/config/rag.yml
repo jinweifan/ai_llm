@@ -1,0 +1,14 @@
+chat_model_name: qwen3-max
+embedding_model_name: text-embedding-v4
+chunk_size: 100
+chunk_overlap: 20
+separators:
+  - "\n\n"
+  - "\n"
+  - " "
+  - ""
+  - "。"
+  - "，"
+  - "！"
+  - "？"
+  - "："

@@ -1,0 +1,53 @@
+from langchain.agents import create_agent
+
+from agent.tools.agent_tools import (
+    fetch_external_data,
+    fill_context_for_report,
+    get_current_month,
+    get_user_id,
+    get_user_location,
+    get_weather,
+    rag_summarize,
+)
+from agent.tools.middleware import log_before_model, report_prompt_switch, monitor_tool
+from model.factory import chat_model
+from utils.prompt_loader import load_system_prompt
+
+class ReactAgent:
+    
+    def __init__(self):
+        self.agent = create_agent(
+            model=chat_model,
+            system_prompt=load_system_prompt(),
+            tools=[
+                rag_summarize,
+                get_weather,
+                get_user_id,
+                get_current_month,
+                fill_context_for_report,
+                fetch_external_data,
+                get_user_location,
+            ],
+            middleware=[
+                log_before_model,
+                report_prompt_switch,
+                monitor_tool,
+            ],
+        )
+    
+    def execute_stream(self, query: str):
+        input_dict = {
+            "messages": [
+                {"role": "user", "content": query}
+            ]
+        }
+        for chunk in self.agent.stream(input_dict, stream_mode="values", context={"report": False}):
+            latest_message = chunk["messages"][-1]
+            if latest_message.content:
+                yield latest_message.content.strip() + "\n"
+
+if __name__ == "__main__":
+    agent = ReactAgent()
+    # for chunk in agent.execute_stream("扫地机器人在我所在的地区的气温下如何保养？"):
+    for chunk in agent.execute_stream("给我生成我的使用报告"):
+        print(chunk, end="", flush=True)
